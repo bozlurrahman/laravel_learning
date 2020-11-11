@@ -50,3 +50,15 @@ Route::get('/usercontroller/path',[
 //    // 'middleware' => 'First',
 //    'uses' => 'LoginController@showProfile'
 //]);
+
+
+Route::resource('my','MyController');
+
+    //Verb	Path	        Action	Route Name
+    //GET	/my	            index	my.index
+    //GET	/my/create	    create	my.create
+    //POST	/my	            store	my.store
+    //GET	/my/{my}	    show	my.show
+    //GET	/my/{my}/edit	edit	my.edit
+    //PUT/PATCH	/my/{my}	update	my.update
+    //DELETE	/my/{my}	destroy	my.destroy
