@@ -24,3 +24,7 @@ Route::redirect('/here', '/foo');
 
 Route::view('/lorem', 'lorem', ['name' => 'Taylor']);
 
+Route::get('role',[
+    'middleware' => 'Role:editor',
+    'uses' => 'TestController@index',
+]);
