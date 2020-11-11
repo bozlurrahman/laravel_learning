@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('foo', function () {
+    return 'Hello World';
+});
+
+Route::redirect('/here', '/foo');
+
+
+Route::view('/lorem', 'lorem', ['name' => 'Taylor']);
+
