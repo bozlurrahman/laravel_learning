@@ -34,3 +34,19 @@ Route::get('terminate', [
     'uses' => 'TerminateController@index',
 ]);
 
+Route::get('user/{name?}', function ($name = 'TutorialsPoint') { return $name;});
+
+ Route::get('profile', [
+    'middleware' => 'auth',
+    'uses' => 'UserController@showProfile'
+ ]);
+
+Route::get('/usercontroller/path',[
+     'middleware' => 'First',
+    'uses' => 'UserController@showPath'
+]);
+
+//Route::get('/login/',[
+//    // 'middleware' => 'First',
+//    'uses' => 'LoginController@showProfile'
+//]);
