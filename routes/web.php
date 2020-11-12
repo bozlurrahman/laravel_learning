@@ -68,3 +68,8 @@ class MyClass{
    public $foo = 'bar';
 }
 Route::get('/myclass','ImplicitController@index');
+
+
+Route::get('/foo/bar','UriController@index');
+
+
