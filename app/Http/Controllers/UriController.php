@@ -17,9 +17,34 @@ class UriController extends Controller
       echo 'is Method: '.$pattern;
       echo '<br>';
       
-      // Usage of url method
+      // Without Query String...
       $url = $request->url();
       echo 'URL method: '.$url;
-      var_dump($request);
+      echo '<br>';
+
+      // With Query String... : http://localhost:8000/foo/bar/?lorem=go&gogo=no
+      $url = $request->fullUrl();
+      echo 'URL method: '.$url;
+      echo '<br>';
+
+      $method = $request->method();
+
+      if ($request->isMethod('get')) {
+         echo 'geted';
+      } else 
+      echo 'not geted';
+
+      echo '<br>';
+      var_dump($request->all());
+
+      $name = $request->input('lorem');
+      var_dump($name);
+
+      // // When working with forms that contain array inputs, use "dot" notation to access the arrays:
+      // $name = $request->input('products.0.name');
+      // $names = $request->input('products.*.name');
+
+      // // retrive json input
+      // $name = $request->input('user.name');
    }
 }
