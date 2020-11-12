@@ -97,3 +97,7 @@ Route::get('/cookie',function() {
    return response("Hello", 200)->header('Content-Type', 'text/html')
       ->withcookie('laravel_cookie_name','Bozlur Rahman with header');
 });
+
+Route::get('json',function() {
+   return response()->json(['name' => 'Bozlur', 'state' => 'Dhaka']);
+});
