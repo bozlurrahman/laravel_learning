@@ -101,3 +101,15 @@ Route::get('/cookie',function() {
 Route::get('json',function() {
    return response()->json(['name' => 'Bozlur', 'state' => 'Dhaka']);
 });
+
+
+
+Route::get('/test', function() {
+   return view('test');
+});
+
+Route::get('/test2', function() {
+   return view('test2');
+});
+
+
