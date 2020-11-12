@@ -82,3 +82,7 @@ Route::post('/user/register',array(
 
 
 
+Route::get('/cookie/set','CookieController@setCookie');
+Route::get('/cookie/get','CookieController@getCookie');
+
+
