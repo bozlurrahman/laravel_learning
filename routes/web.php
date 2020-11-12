@@ -62,3 +62,9 @@ Route::resource('my','MyController');
     //GET	/my/{my}/edit	edit	my.edit
     //PUT/PATCH	/my/{my}	update	my.update
     //DELETE	/my/{my}	destroy	my.destroy
+
+
+class MyClass{
+   public $foo = 'bar';
+}
+Route::get('/myclass','ImplicitController@index');
