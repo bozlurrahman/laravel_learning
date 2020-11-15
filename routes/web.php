@@ -31,7 +31,7 @@ Route::get('go_spacific_profile/{user_name?}', function ($user_name = 'Custom Na
 });
 Route::get('redirect_to_controller_action', function () {
     return redirect()->action(
-    	'TestController@index' 
+    	'TestController@index'
     );
 });
 
@@ -163,3 +163,4 @@ Route::get('home', function () {
 Route::get('insert','StudInsertController@insertform');
 Route::post('create','StudInsertController@insert');
 
+Route::get('view-records','StudViewController@index');
