@@ -21,6 +21,15 @@ Route::get('foo', function () {
 
 Route::redirect('/here', '/foo');
 
+Route::get('go_default_profile', function () {
+    return redirect()->route('profile');
+});
+
+Route::get('go_spacific_profile/{user_name?}', function ($user_name = 'Custom Name') {
+    return redirect()->route('profile', ['name' => $user_name ]);
+    // http://localhost:8000/go_spacific_profile/karimoddi
+});
+
 
 Route::view('/lorem', 'lorem', ['name' => 'Taylor']);
 
@@ -34,7 +43,7 @@ Route::get('terminate', [
     'uses' => 'TerminateController@index',
 ]);
 
-Route::get('user/{name?}', function ($name = 'TutorialsPoint') { return $name;});
+Route::get('user/{name?}', function ($name = 'TutorialsPoint') { return $name;})->name('profile');
 
  Route::get('profile', [
     'middleware' => 'auth',
