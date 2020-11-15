@@ -20,5 +20,8 @@ class UserRegistration extends Controller
 		//Retrieve the password input field
 		$password = $request->password;
 		echo 'Password: '.$password;
+
+		// // used to get back previous form automatically
+		// return back()->withInput();
    }
 }
