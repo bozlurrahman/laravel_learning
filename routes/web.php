@@ -60,6 +60,19 @@ Route::get('/usercontroller/path',[
 //    'uses' => 'LoginController@showProfile'
 //]);
 
+// assign middleware to all routes within a group
+Route::middleware(['First', 'Second'])->group(function () {
+    Route::get('/first_second_middleware', function () {
+        // Uses first & second Middleware
+        return 'My Route Contents';
+    });
+
+    Route::get('route_loaded_after_middleware', function () {
+        // Uses first & second Middleware
+        return '<br>Content will be load after middleware loaded';
+    });
+});
+
 
 Route::resource('my','MyController');
 
