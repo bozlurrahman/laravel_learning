@@ -169,3 +169,6 @@ Route::get('edit-records','StudUpdateController@index');
 Route::get('edit/{id}','StudUpdateController@show');
 Route::post('edit/{id}','StudUpdateController@edit');
 
+Route::get('delete-records','StudDeleteController@index');
+Route::get('delete/{id}','StudDeleteController@destroy');
+
