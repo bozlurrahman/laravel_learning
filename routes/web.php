@@ -73,6 +73,12 @@ Route::middleware(['First', 'Second'])->group(function () {
     });
 });
 
+Route::prefix('admin')->group(function () {
+    Route::get('users', function () {
+        // Matches The "/admin/users" URL
+        return 'admin users loaded';
+    });
+});
 
 Route::resource('my','MyController');
 
