@@ -29,6 +29,11 @@ Route::get('go_spacific_profile/{user_name?}', function ($user_name = 'Custom Na
     return redirect()->route('profile', ['name' => $user_name ]);
     // http://localhost:8000/go_spacific_profile/karimoddi
 });
+Route::get('redirect_to_controller_action', function () {
+    return redirect()->action(
+    	'TestController@index' 
+    );
+});
 
 
 Route::view('/lorem', 'lorem', ['name' => 'Taylor']);
