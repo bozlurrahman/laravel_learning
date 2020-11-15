@@ -46,5 +46,13 @@ class UriController extends Controller
 
       // // retrive json input
       // $name = $request->input('user.name');
+
+      // $input = $request->only(['username', 'password']);
+      // $input = $request->only('username', 'password');
+      // $input = $request->except(['credit_card']);
+      // $input = $request->except('credit_card');
+      // if ($request->has('name')) {
+      // if ($request->has(['name', 'email'])) {
+      // if ($request->filled('name')) {if a value is present on the request and is not empty
    }
 }

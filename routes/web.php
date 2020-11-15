@@ -89,7 +89,7 @@ Route::get('/cookie/get','CookieController@getCookie');
 Route::get('/header',function() {
 	// see the list of content-types: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
    return response("Hello", 200)->header('Content-Type', 'application/json');
-   // return response("Hello", 200)->header('Content-Type', 'text/html');
+   // return response("Hello", 200)->header('Content-Type', 'text/plain');
 });
 
 
