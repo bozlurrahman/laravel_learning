@@ -178,3 +178,7 @@ Route::get('/form',function() {
 
 Route::get('localization/{locale}','LocalizationController@index');
 
+Route::get('session/get','SessionController@accessSessionData');
+Route::get('session/set','SessionController@storeSessionData');
+Route::get('session/remove','SessionController@deleteSessionData');
+
