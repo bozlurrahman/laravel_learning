@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Model\MyClass;
 
 class ImplicitController extends Controller
-{   
+{
     private $myclass;
 
-    public function __construct(\MyClass $myclass) {
+    public function __construct(MyClass $myclass) {
         $this->myclass = $myclass;
     }
     public function index() {
@@ -33,7 +34,7 @@ class ImplicitController extends Controller
 
     // *
     //  * Responds to requests to GET /test/admin-profile
-     
+
     // public function getAdminProfile() {
     //     echo 'admin profile method';
     // }

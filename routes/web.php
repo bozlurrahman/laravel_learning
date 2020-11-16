@@ -96,12 +96,7 @@ Route::resource('my','MyController');
     //PUT/PATCH	/my/{my}	update	my.update
     //DELETE	/my/{my}	destroy	my.destroy
 
-
-class MyClass{
-   public $foo = 'bar';
-}
 Route::get('/myclass','ImplicitController@index');
-
 
 Route::get('/foo/bar','UriController@index');
 
