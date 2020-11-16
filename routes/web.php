@@ -184,3 +184,8 @@ Route::get('session/remove','SessionController@deleteSessionData');
 
 Route::get('/validation','ValidationController@showform');
 Route::post('/validation','ValidationController@validateform');
+
+
+Route::get('/uploadfile','UploadFileController@index');
+Route::post('/uploadfile','UploadFileController@showUploadFile');
+
