@@ -172,3 +172,7 @@ Route::post('edit/{id}','StudUpdateController@edit');
 Route::get('delete-records','StudDeleteController@index');
 Route::get('delete/{id}','StudDeleteController@destroy');
 
+Route::get('/form',function() {
+    return view('form');
+});
+
